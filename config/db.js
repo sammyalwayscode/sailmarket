@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
-// const MONGODB_LIVE_URI =
-//   "mongodb+srv://W8PypVqIRJXDReMh:W8PypVqIRJXDReMh@cluster0.1nq2x.mongodb.net/sailmarket?retryWrites=true&w=majority&appName=Cluster0";
-const MONGODB_LOCAL_URI = "mongodb://localhost:27017/sailmarket";
+const MONGODB_LIVE_URI = "mongodb+srv://W8PypVqIRJXDReMh:W8PypVqIRJXDReMh@cluster0.1nq2x.mongodb.net/sailmarket?retryWrites=true&w=majority&appName=Cluster0";
+// const MONGODB_LOCAL_URI = "mongodb://localhost:27017/sailmarket";
 
-mongoose.connect(MONGODB_LOCAL_URI);
+mongoose.connect(MONGODB_LIVE_URI);
 mongoose.connection
   .on("open", () => {
     console.log("Connected to Database");
